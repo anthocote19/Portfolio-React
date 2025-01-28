@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Site de Location Saisonnière",
+    "imageSrc": "projects/project.png",
+    "description": "This project involves creating a seasonal rental website (similar to AirBnB, VRBO, Booking, etc.) using HTML and CSS.",
+    "skills": ["HTML", "CSS"],
+    "demo": "",
+    "source": "https://github.com/anthocote19/Location-Website"
+  },
+  {
+    "title": "Site de Cinéma",
+    "imageSrc": "projects/project.png",
+    "description": "A web application for displaying and searching movies available online. It offers a modern and intuitive user interface.",
+    "skills": ["JS", "HTML", "CSS", "Serveur HTTP VITE"],
+    "demo": "",
+    "source": "https://github.com/anthocote19/Cinema-Project"
+  },
+  {
+    "title": "Projet Pokémon",
+    "imageSrc": "projects/project.png",
+    "description": "SUPINFO World CLI Gaming asks you to develop a console (CLI) version of Pokémon in C, called Supémon.",
+    "skills": ["C"],
+    "demo": "",
+    "source": "https://github.com/anthocote19/Pokemon-Project"
+  }
+]

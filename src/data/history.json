@@ -1,0 +1,28 @@
+[
+  {
+    "role": "Stagiaire",
+    "organisation": "Capgemini",
+    "startDate": "Juin 2022",
+    "endDate": "Juillet 2022",
+    "experiences": ["Observation des métiers du développement logiciel."],
+    "imageSrc": "history/google.png"
+  },
+  {
+    "role": "Stagiaire",
+    "organisation": "Infirmière FSM",
+    "startDate": "Avril 2021",
+    "endDate": "Mai 2021",
+    "experiences": ["Observation des soins réalisés à domicile et au cabinet et prises de glycémie et préparation des pilluliers."],
+    "imageSrc": "history/microsoft.png"
+  },
+  {
+    "role": "Développeur",
+    "organisation": "GTA RP",
+    "startDate": "Octobre 2024",
+    "endDate": "Décembre 2024",
+    "experiences": [
+      "Participation au développement d'un serveur GTA RôlePlay coder en LUA"
+    ],
+    "imageSrc": "history/netflix.png"
+  }
+]
