@@ -5,7 +5,7 @@
     "startDate": "Juin 2022",
     "endDate": "Juillet 2022",
     "experiences": ["Observation des métiers du développement logiciel."],
-    "imageSrc": "history/google.png"
+    "imageSrc": "history/Capgemini.png"
   },
   {
     "role": "Stagiaire",
@@ -13,7 +13,7 @@
     "startDate": "Avril 2021",
     "endDate": "Mai 2021",
     "experiences": ["Observation des soins réalisés à domicile et au cabinet et prises de glycémie et préparation des pilluliers."],
-    "imageSrc": "history/microsoft.png"
+    "imageSrc": "history/Inf.png"
   },
   {
     "role": "Développeur",
@@ -23,6 +23,6 @@
     "experiences": [
       "Participation au développement d'un serveur GTA RôlePlay coder en LUA"
     ],
-    "imageSrc": "history/netflix.png"
+    "imageSrc": "history/GTA.png"
   }
 ]

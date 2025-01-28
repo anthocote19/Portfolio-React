@@ -1,7 +1,7 @@
 [
   {
     "title": "Site de Location Saisonnière",
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/Loca.png",
     "description": "This project involves creating a seasonal rental website (similar to AirBnB, VRBO, Booking, etc.) using HTML and CSS.",
     "skills": ["HTML", "CSS"],
     "demo": "",
@@ -9,7 +9,7 @@
   },
   {
     "title": "Site de Cinéma",
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/Cinema.png",
     "description": "A web application for displaying and searching movies available online. It offers a modern and intuitive user interface.",
     "skills": ["JS", "HTML", "CSS", "Serveur HTTP VITE"],
     "demo": "",
@@ -17,7 +17,7 @@
   },
   {
     "title": "Projet Pokémon",
-    "imageSrc": "projects/project.png",
+    "imageSrc": "projects/Pokemon.png",
     "description": "SUPINFO World CLI Gaming asks you to develop a console (CLI) version of Pokémon in C, called Supémon.",
     "skills": ["C"],
     "demo": "",
