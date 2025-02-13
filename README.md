@@ -5,7 +5,7 @@ Welcome to my personal portfolio built with React! This project showcases my ski
 ## Features 
  
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices. 
-- **Projects Section**: Displays a collection of web development projects I've worked on.
+- **Projects Section**: Displays a collection of web development projects I've worked on. 
 - **About Me**: Learn more about my background, skills, and passions.
 - **Contact Form**: A simple form to get in touch with me directly.
 - **Animations**: Smooth animations for a better user experience.
