@@ -15,7 +15,7 @@ Welcome to my personal portfolio built with React! This project showcases my ski
 
 - **React**: A JavaScript library for building user interfaces.
 - **CSS3**: For styling the components and creating responsive layouts.
-- **HTML5**: To structure the content.
+- **HTML5**: To structure the content. 
 - **React Router**: For navigation between pages.
 - **Node.js**: For local development server.
 
