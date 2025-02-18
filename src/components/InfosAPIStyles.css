@@ -1,0 +1,210 @@
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .infos-api-container {
+    position: relative;
+    padding: 40px;
+    padding-top: 0.2px;
+    background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #002244, #000d1a);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    position: relative;
+    top: -160px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00ff99, #00ccff, #ff00ff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientMove 6s ease infinite;
+    text-shadow: 0px 0px 10px rgba(0, 255, 153, 0.7);
+    text-align: center;
+  }
+  
+  .articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .article {
+    width: 320px;
+    height: 520px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(0, 255, 153, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0px 0px 15px rgba(0, 255, 153, 0.3);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  
+  .article:hover {
+    transform: scale(1.05);
+    background: rgba(0, 255, 153, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 255, 153, 0.6);
+    border-color: rgba(0, 255, 153, 0.8);
+  }
+  
+  .article::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(0, 255, 153, 0.15), transparent);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .article:hover::before {
+    opacity: 1;
+  }
+  
+  .article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border-bottom: 2px solid rgba(0, 255, 153, 0.5);
+  }
+  
+  .article h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    background: linear-gradient(90deg, #00ff99, #00ccff);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .article p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    color: #ddd;
+    flex-grow: 1; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+  }
+  
+  .article a {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #00ff99, #00ccff);
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, background 0.3s ease;
+    position: relative;
+    z-index: 2;
+    align-self: center; /* Centre le bouton */
+    margin-top: auto; /* Pousse le bouton en bas */
+  }
+  
+  .article a:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #00ccff, #00ff99);
+  }
+  
+  @media (max-width: 1024px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .articles {
+      gap: 20px;
+      width: 100%;
+    }
+  
+    .article {
+      width: 280px;
+      height: 400px; /* Ajustement pour tablettes */
+      padding: 15px;
+    }
+  
+    .article h3 {
+      font-size: 1.2rem;
+    }
+  
+    .article p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Écrans petits (mobiles) */
+  @media (max-width: 768px) {
+    .infos-api-container {
+      padding: 20px;
+      min-height: auto;
+    }
+  
+    .title {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+  
+    .articles {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .article {
+      width: 90%;
+      max-width: 340px;
+      height: auto; /* Ajustement pour mobile */
+    }
+  }
+  
+  /* Très petits écrans (mobiles en mode portrait) */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .article {
+      width: 95%;
+    }
+  
+    .article p {
+      font-size: 0.85rem;
+    }
+  
+    .article a {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,0 +1,101 @@
+.showcase.futuristic {
+  width: 100%;
+  padding: 6rem 1rem;
+  background: radial-gradient(circle, rgba(18,18,18,1) 30%, rgba(30,30,30,1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00eaff;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.8), 0 0 20px rgba(0, 234, 255, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+.title:hover {
+  text-shadow: 0 0 20px rgba(0, 234, 255, 1), 0 0 40px rgba(0, 234, 255, 0.8);
+}
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 260px;
+  height: 230px;
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-card:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 15px 40px rgba(0, 255, 255, 0.5);
+}
+
+.profile-card svg {
+  color: #00eaff;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.profile-card:hover svg {
+  color: #ff00ff;
+  transform: scale(1.2);
+}
+
+
+.showcase.light {
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  color: black;
+}
+
+.showcase.dark {
+  background: linear-gradient(135deg, #121212, #1a1a1a);
+  color: white;
+}
+
+.profile-card.light {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+.profile-card.dark {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card {
+    width: 90%;
+    height: auto;
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,218 @@
+/* 🌟 Navbar de base */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1000;
+    background: transparent;
+    transition: background 0.3s ease-in-out;
+}
+
+.header.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* 🌟 Logo & Thème */
+.logo-container {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.theme-toggle.light {
+    color: #FFD700;
+}
+
+.theme-toggle.dark {
+    color: #87CEFA;
+}
+
+.theme-toggle:active {
+    transform: scale(1.2);
+}
+
+/* 🌟 Navigation */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-menu li {
+    list-style: none;
+}
+
+.nav-menu li a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    color: #00aaff;
+    font-weight: bold;
+    border-bottom: 2px solid #00aaff;
+}
+
+/* 🌟 Bouton Se connecter (Desktop) */
+.auth-button-desktop {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.auth-button-desktop:hover {
+    background-color: #0088cc;
+}
+
+/* 🌟 Menu Hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1010;
+    color: white;
+}
+
+/* 🌟 Mode Responsive */
+@media screen and (max-width: 1040px) {
+    .header {
+        height: 75px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    /* Navbar mobile */
+    .nav-menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0;
+        left: -100vw; /* initial state off-screen */
+        transition: left 0.3s ease-in-out;
+        z-index: 1001;
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0; /* make the menu visible */
+    }
+
+    .nav-menu li {
+        margin-bottom: 1rem;
+    }
+
+    /* Menu burger */
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1010; /* Ensure it stays above other elements */
+    }
+
+    .hamburger svg {
+        transition: transform 0.3s ease;
+    }
+
+    .hamburger.active svg {
+        display: none; /* Hide the hamburger when the menu is open */
+    }
+
+    /* Bouton Se connecter en mode mobile (sous "Contact") */
+    .auth-button-desktop {
+        display: none;
+    }
+
+    .auth-button-mobile {
+        margin-top: 1.5rem;
+        display: block; /* Ensure it's visible on mobile */
+    }
+
+    .auth-button-mobile button {
+        background-color: #00aaff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+    }
+
+    .auth-button-mobile button:hover {
+        background-color: #0088cc;
+    }
+}
+
+/* 🌟 Mobile Specific Styles */
+body.light {
+    background-color: #87CEFA;
+    color: #fff;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #87CEFA;
+}
+
+.auth-button-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .auth-button-mobile {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .auth-button-desktop {
+        display: none;
+    }
+}
+
+

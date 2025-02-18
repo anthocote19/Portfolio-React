@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh; 
+  padding: 40px 20px;
+  background: radial-gradient(circle, rgba(10,10,10,1) 0%, rgba(20,20,20,1) 100%);
+}
+
+
+.about-content {
+  width: 90vw; 
+  max-width: 1200px;
+  padding: 80px; 
+  text-align: center;
+  background: linear-gradient(135deg, rgba(0, 10, 20, 0.9), rgba(0, 255, 255, 0.3));
+backdrop-filter: blur(20px) saturate(150%);
+box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 150, 255, 0.4);
+border: 1px solid rgba(0, 255, 255, 0.5);
+
+  border-radius: 20px; 
+  animation: fadeIn 1s ease-in-out;
+  transform: scale(1.05); 
+}
+
+h1.glitch {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #00f;
+  position: relative;
+}
+
+h1.glitch::before,
+h1.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+}
+
+h1.glitch::before {
+  left: -2px;
+  text-shadow: -2px 0 #ff00ff;
+  animation: glitch 0.6s infinite alternate-reverse;
+}
+
+h1.glitch::after {
+  left: 2px;
+  text-shadow: -2px 0 #00ffff;
+  animation: glitch 0.6s infinite alternate-reverse;
+}
+
+/* ===== Texte général ===== */
+.about-text {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #fff;
+}
+
+/* ===== Cartes ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptatif */
+  gap: 20px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.card {
+  background: linear-gradient(145deg, #101010, #1a1a1a);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+/* ===== Icônes ===== */
+.icon {
+  font-size: 2rem;
+  color: #0ff;
+  margin-bottom: 10px;
+}
+
+/* ===== Bouton GitHub ===== */
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background: linear-gradient(45deg, #1e90ff, #0ff);
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.github-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(30, 144, 255, 1);
+}
+
+/* ===== Animations ===== */
+@keyframes glitch {
+  0% { clip-path: inset(0 0 20% 0); }
+  100% { clip-path: inset(0 0 80% 0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive Design ===== */
+@media screen and (max-width: 1024px) {
+  .about-container {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  .about-content {
+    width: 95%;
+    padding: 40px;
+  }
+
+  h1.glitch {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+  }
+
+  .github-link {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    width: 98%;
+    padding: 30px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr; /* Une seule colonne */
+  }
+
+  h1.glitch {
+    font-size: 1.8rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .github-link {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

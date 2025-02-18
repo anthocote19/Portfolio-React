@@ -1,0 +1,105 @@
+.chat-container {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 350px;
+  padding: 25px;
+  background: rgba(20, 20, 20, 0.9);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.chat-container:hover {
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  flex: 1;
+  margin: 5px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 20px; 
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+
+button:hover {
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.reset-btn {
+  background: linear-gradient(45deg, red, red);
+}
+
+.reset-btn:hover {
+  background: linear-gradient(45deg, red, red);
+}
+
+.response-container {
+  margin-top: 15px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  min-height: 60px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    width: 90%;
+    right: 5%;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+  }
+}

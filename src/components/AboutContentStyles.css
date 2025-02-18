@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #121212;
+    color: #fff;
+}
+
+.about {
+    width: 100%;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.about .left {
+    max-width: 350px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.about .left h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00aaff;
+    margin-bottom: 1rem;
+}
+
+.about .left p {
+    margin: 1.2rem 0;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+.about .right {
+    max-width: 700px;
+    width: 100%;
+}
+
+.right .img-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    align-items: center;
+}
+
+.right .img {
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.right .top {
+    grid-column: 1 / span 8;
+    padding-top: 20%;
+    z-index: 6;
+}
+
+.right .bottom {
+    grid-column: 4 / -1;
+    z-index: 5;
+}
+
+.cv-section {
+    width: 100%;
+    padding: 5rem 2rem;
+    color: #f9fafb;
+    text-align: center;
+    margin-top: 4rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    animation: fadeInSection 3s ease-out;
+}
+
+.cv-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #38bdf8;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+
+.cv-section h2:hover {
+    transform: translateY(-5px);
+}
+
+.cv-content {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.cv-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 255, 255, 0.15));
+    backdrop-filter: blur(25px);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    width: 320px;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+
+.cv-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 255, 255, 0.7);
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border-color: rgba(0, 255, 255, 0.6);
+}
+
+.cv-icon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+
+.cv-card:hover .cv-icon img {
+    transform: scale(1.2) rotate(8deg);
+}
+
+.capgemini-icon {
+    filter: drop-shadow(0px 0px 8px cyan);
+}
+
+.nurse-icon {
+    filter: drop-shadow(0px 0px 8px cyan);
+}
+
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.cv-card {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+
+.neon-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: cyan;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan;
+}
+
+.futuristic-text {
+    font-size: 1rem;
+    color: #ddd;
+    opacity: 0.9;
+}
+
+
+@media (max-width: 768px) {
+    .cv-content { flex-direction: column; align-items: center; }
+    .cv-card { width: 90%; margin-bottom: 2rem; padding: 2.5rem; }
+}
+
+@media (max-width: 480px) {
+    .cv-card { width: 100%; padding: 2rem; }
+    .neon-text { font-size: 1.2rem; }
+    .futuristic-text { font-size: 0.95rem; }
+}
+
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .right {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .right .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .right .img {
+        max-width: 80%;
+        height: auto;
+    }
+}
+
+

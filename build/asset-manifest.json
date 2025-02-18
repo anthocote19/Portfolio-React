@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.549d06b0.css",
+    "main.js": "/static/js/main.f4015aca.js",
+    "static/media/image.png": "/static/media/image.55220796b050bec09a06.png",
+    "static/media/Anthony COTE.JPG": "/static/media/Anthony COTE.8f958babcc2630a0af16.JPG",
+    "static/media/Cinema.png": "/static/media/Cinema.a55338e10dd9ae2fa04a.png",
+    "static/media/Starfight.png": "/static/media/Starfight.df897c1b109334ea2fc2.png",
+    "static/media/Pokemon.png": "/static/media/Pokemon.dde41d386adaad7a2e93.png",
+    "index.html": "/index.html",
+    "main.549d06b0.css.map": "/static/css/main.549d06b0.css.map",
+    "main.f4015aca.js.map": "/static/js/main.f4015aca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.549d06b0.css",
+    "static/js/main.f4015aca.js"
+  ]
+}

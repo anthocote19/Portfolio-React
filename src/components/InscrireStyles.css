@@ -1,0 +1,131 @@
+/* Container principal */
+.inscrire-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Carte d'inscription */
+.inscrire-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 50px;
+    width: 380px;
+    box-shadow: 0px 0px 50px rgba(0, 255, 255, 0.3);
+    text-align: center;
+    color: white;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+    border: 2px solid #00ffff;
+}
+
+/* Animation de fade-in */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Titre */
+.inscrire-box h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00ffff;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+/* Champ de texte */
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Focus sur les champs de texte */
+.input-group input:focus {
+    border-color: #00ffff;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Bouton */
+.inscrire-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00ffff, #00b8b8);
+    color: #16213e;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 16px rgba(0, 255, 255, 0.4);
+}
+
+.inscrire-btn:hover {
+    background: linear-gradient(135deg, #00b8b8, #00ffff);
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.6);
+}
+
+/* Texte pour basculer entre connexion/inscription */
+.toggle-text {
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.toggle-text span {
+    color: cyan;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.toggle-text span:hover {
+    color: #00ffff;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+.inscrire-container:hover .inscrire-box {
+    transform: translateY(0px);
+    transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 400px) {
+    .inscrire-box {
+        width: 90%;
+        padding: 30px;
+    }
+}

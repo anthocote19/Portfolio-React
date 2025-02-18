@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
+/* ===== Style général du Footer ===== */
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  background: #111;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Effet néon circulant */
+.footer-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  animation: borderGlow 4s linear infinite;
+}
+
+/* ===== Conteneur principal ===== */
+.footer-container {
+  max-width: 1100px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  z-index: 2;
+}
+
+/* ===== Partie gauche ===== */
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Icônes */
+.icon {
+  color: cyan;
+  margin-right: 1rem;
+}
+
+/* Informations */
+.location, .phone, .email {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+/* ===== Partie droite ===== */
+h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* ===== Icônes sociales ===== */
+.social {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: cyan;
+}
+
+@keyframes borderGlow {
+  0% {
+      box-shadow: 0 0 5px #0ff, 0 0 15px #0ff, 0 0 30px #0ff inset;
+      border-image-source: linear-gradient(45deg, #0ff, #ff00ff);
+  }
+  25% {
+      box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 35px #ff00ff inset;
+      border-image-source: linear-gradient(45deg, #ff00ff, #00ffff);
+  }
+  50% {
+      box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff, 0 0 40px #00ffff inset;
+      border-image-source: linear-gradient(45deg, #00ffff, #ff4500);
+  }
+  75% {
+      box-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500, 0 0 45px #ff4500 inset;
+      border-image-source: linear-gradient(45deg, #ff4500, #9400d3);
+  }
+  100% {
+      box-shadow: 0 0 5px #0ff, 0 0 15px #0ff, 0 0 30px #0ff inset;
+      border-image-source: linear-gradient(45deg, #0ff, #ff00ff);
+  }
+}
+
+@keyframes borderRun {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.borderGlow {
+  border: 3px solid transparent;
+  border-radius: 10px;
+  border-image-slice: 1;
+  animation: borderGlow 3s infinite alternate ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de lumière en mouvement */
+.borderGlow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 255, 0.8), transparent);
+  animation: borderRun 3s infinite linear;
+}
+
+.borderGlow:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 18px; 
+  font-weight: 800; 
+}
+
+
+
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .location, .phone, .email {
+    justify-content: center;
+  }
+
+  .social {
+    justify-content: center;
+  }
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}

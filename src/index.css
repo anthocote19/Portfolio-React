@@ -1,10 +1,64 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Outfit", Arial, Helvetica, sans-serif;
+  font-family: 'Outfit', sans-serif;
+  
 }
 
-html {
-  scroll-behavior: smooth;
+body {
+  background: linear-gradient(45deg, #00c6ff, #0072ff, #6a11cb);
+  background-size: 400% 400%;
+  animation: bgAnimation 15s ease infinite;
 }
+
+
+
+
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1, h4,p,
+a{
+  color: #fff; ;
+  text-decoration: none;
+}
+
+ul{
+  list-style-type:none; 
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00eaff, #0072ff);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  transition: background 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #0072ff, #00eaff);
+  box-shadow: 0 0 15px #0072ff;
+}
+
+
+
